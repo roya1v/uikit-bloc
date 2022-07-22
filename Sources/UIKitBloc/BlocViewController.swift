@@ -14,7 +14,7 @@ open class BlocViewController<Event, State>: UIViewController {
     public let events = PassthroughSubject<Event, Never>()
     private var cancellable = Set<AnyCancellable>()
 
-    override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
 
         bindBloc()
@@ -32,12 +32,12 @@ open class BlocViewController<Event, State>: UIViewController {
 
     }
 
-    open init(with bloc: Bloc<Event, State>) {
+    public init(with bloc: Bloc<Event, State>) {
         self.bloc = bloc
         super.init(nibName: nil, bundle: nil)
     }
 
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }

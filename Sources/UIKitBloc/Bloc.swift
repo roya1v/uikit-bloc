@@ -20,6 +20,8 @@ open class Bloc<Event, State> {
             .store(in: &cancellable)
         return state.eraseToAnyPublisher()
     }
+
+    public init() { }
     
     open func map(_ event: Event) {
         

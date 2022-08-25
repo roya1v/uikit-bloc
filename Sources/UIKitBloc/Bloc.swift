@@ -8,7 +8,8 @@
 import Foundation
 import Combine
 
-/// Subclass this class to create a Bloc.
+/// Takes an ``AnyPublisher`` of ``Event``
+/// and transforms it into an ``AnyPublisher`` of ``State``
 open class Bloc<Event, State> {
     
     private var cancellable = Set<AnyCancellable>()

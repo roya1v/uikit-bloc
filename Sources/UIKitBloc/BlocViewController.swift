@@ -8,6 +8,7 @@
 import UIKit
 import Combine
 
+/// Takes in a ``Bloc`` and calles ``map(_:)`` on receiving each new ``State``
 open class BlocViewController<Event, State>: UIViewController {
 
     public let bloc: Bloc<Event, State>

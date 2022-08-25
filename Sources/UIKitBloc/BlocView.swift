@@ -24,7 +24,7 @@ open class BlocView<Event, State>: UIView {
     }
 
     open func map(_ state: State) {
-
+        fatalError("map() should be overridden")
     }
 
     public init(with bloc: Bloc<Event, State>) {

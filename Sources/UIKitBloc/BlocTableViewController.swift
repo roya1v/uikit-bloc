@@ -29,7 +29,7 @@ open class BlocTableViewController<Event, State>: UITableViewController {
     }
 
     open func map(_ state: State) {
-
+        fatalError("map() should be overridden")
     }
 
     public init(with bloc: Bloc<Event, State>) {

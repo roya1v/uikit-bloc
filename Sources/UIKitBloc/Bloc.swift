@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+/// Subclass this class to create a Bloc.
 open class Bloc<Event, State> {
     
     private var cancellable = Set<AnyCancellable>()
@@ -24,6 +25,6 @@ open class Bloc<Event, State> {
     public init() { }
     
     open func map(_ event: Event) {
-        
+        fatalError("map() should be overridden")
     }
 }

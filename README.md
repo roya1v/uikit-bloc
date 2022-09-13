@@ -73,7 +73,7 @@ final class ExampleViewController: BlocViewController<ExampleEvent, ExampleState
 
     // MARK: - Bloc
 
-    override func map(_ state: ShotLocationMapState) {
+    override func map(_ state: ExampleState) {
         switch state {
         case .exampleState:
             doSomething()
